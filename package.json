@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/asbjornenge/testdom/issues"
   },
-  "homepage": "https://github.com/asbjornenge/testdom"
+  "homepage": "https://github.com/asbjornenge/testdom",
+  "dependencies": {
+    "jsdom": "^0.11.1",
+    "localStorage": "^1.0.2"
+  }
 }
