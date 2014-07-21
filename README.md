@@ -1,8 +1,8 @@
 # Testdom
 
-Testdom is a [jsdom]() wrapper intended to help developers write test code that works both in the browser and in node.
+Testdom is a [jsdom](https://github.com/tmpvar/jsdom) wrapper to help developers write test code that works both in the browser and in node.
 
-It works by checking if a global document exists in it's current environment. If it does it bails out and expects the browser to provide all available browser globals. If a global document does not exists, it will create one using [jsdom](). It will also create other appropriate browser globals using jsdom and a few other libraries.
+It works by checking if a global document exists in it's current environment. If it does it bails out and expects the browser to provide all available browser globals. If a global document does not exists, it will create one using jsdom. It will also create other appropriate browser globals using jsdom and a few other libraries.
 
 **WANTED!** PRs and issues with wanted globals and appropriate libraries.
 
