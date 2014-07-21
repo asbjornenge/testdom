@@ -1,0 +1,27 @@
+{
+  "name": "testdom",
+  "version": "0.1.0",
+  "description": "Testdom helps you write tests for the browser & node",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R nyan -w --check-leaks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asbjornenge/testdom.git"
+  },
+  "keywords": [
+    "dom",
+    "test",
+    "testing"
+  ],
+  "author": "Asbjorn Enge <asbjorn@hanafjedle.net>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/asbjornenge/testdom/issues"
+  },
+  "homepage": "https://github.com/asbjornenge/testdom"
+}
