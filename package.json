@@ -1,6 +1,6 @@
 {
   "name": "testdom",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Testdom helps you write tests for the browser & node",
   "main": "index.js",
   "directories": {
