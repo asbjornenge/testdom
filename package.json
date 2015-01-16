@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/asbjornenge/testdom",
   "dependencies": {
-    "jsdom": "^2.0.0",
-    "localStorage": "^1.0.2"
+    "jsdom": "^2.0.0"
+  },
+  "devDependencies": {
+    "localStorage": "^1.0.3"
   }
 }
