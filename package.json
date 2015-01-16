@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/asbjornenge/testdom",
   "dependencies": {
+    "es6-promise": "^2.0.1",
     "jsdom": "^0.11.1",
     "localStorage": "^1.0.2"
   }
