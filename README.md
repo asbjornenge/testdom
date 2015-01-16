@@ -22,7 +22,7 @@ Testling uses [browserify](http://browserify.org/) to create a browser compatibl
 In your <code>package.json</code> add a *browser* field and add tell browserify to ignore *jsdom*.
 
     $ vi package.json
-    
+
     ...
     "browser" : {
         "jsdom" : false
@@ -32,3 +32,13 @@ In your <code>package.json</code> add a *browser* field and add tell browserify 
 Since testdom only tries to require jsdom if no document exists; the browser will never reach that code and we are good. The tests will use the browser's DOM.
 
 enjoy.
+
+## ES6
+
+    var es6 = true;
+    require('testdom')('<html><body></body></html>', es6)
+    console.log(document)
+
+ES6 Support adds
+
+- `Promise` (https://www.npmjs.com/package/es6-promise)
