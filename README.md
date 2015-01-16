@@ -2,7 +2,7 @@
 
 Testdom is a [jsdom](https://github.com/tmpvar/jsdom) wrapper to help developers write test code that works both in the browser and in node.
 
-It works by checking if a global document exists in it's current environment. If it does it bails out and expects the browser to provide all available browser globals. If a global document does not exists, it will create one using jsdom. It will also create other appropriate browser globals using jsdom.
+It works by checking if a global document exists in it's current environment. If it does it bails out and expects the browser to provide all available browser globals. If a global document does not exists, it will create one using jsdom. 
 
 **WANTED!** *PRs with more tested additional globals.*
 
@@ -24,15 +24,15 @@ Testdom supports an argument of *additional globals* that will be loaded (using 
     })
     console.log(localStorage)
 
-In the *additional globals* object the key is the name of the global the the value is the module name to be require'd.
+In the *additional globals* object the **key** is the **name of the global** the the **value** is the **module** name to be require'd.
 
 ### Confirmed modules
 
 A list of modules confirmed to work well as a global/polyfill for jsdom.
 
-| Global        | Module        |
-|:------------- |:------------- |
-| localStorage  | [localStorage](https://www.npmjs.com/package/localStorage) |
+| Global        | Module        | Notes |
+|:------------- |:------------- |:----- | 
+| localStorage  | [localStorage](https://www.npmjs.com/package/localStorage) | 404 link but npm install works |
 
 ## Testling
 
