@@ -2,9 +2,9 @@
 
 Testdom is a [jsdom](https://github.com/tmpvar/jsdom) wrapper to help developers write test code that works both in the browser and in node.
 
-It works by checking if a global document exists in it's current environment. If it does it bails out and expects the browser to provide all available browser globals. If a global document does not exists, it will create one using jsdom. It will also create other appropriate browser globals using jsdom and a few other libraries.
+It works by checking if a global document exists in it's current environment. If it does it bails out and expects the browser to provide all available browser globals. If a global document does not exists, it will create one using jsdom. 
 
-**WANTED!** *PRs and issues with missing globals and appropriate libraries.*
+**WANTED!** *PRs with more tested additional globals.*
 
 ## Install
 
@@ -14,6 +14,25 @@ It works by checking if a global document exists in it's current environment. If
 
     require('testdom')('<html><body></body></html>')
     console.log(document)
+
+## Additional globals
+
+Testdom supports an argument of *additional globals* that will be loaded (using require) only if no DOM exists. This way users can experiment with different modules as browser global replacements and polyfills.
+
+    require('testdom')('<html><body></body></html>', {
+        localStorage : 'localStorage'
+    })
+    console.log(localStorage)
+
+In the *additional globals* object the **key** is the **name of the global** the the **value** is the **module** name to be require'd.
+
+### Confirmed modules
+
+A list of modules confirmed to work well as a global/polyfill for jsdom.
+
+| Global        | Module        | Notes |
+|:------------- |:------------- |:----- | 
+| localStorage  | [localStorage](https://www.npmjs.com/package/localStorage) | 404 link but npm install works |
 
 ## Testling
 
@@ -30,5 +49,17 @@ In your <code>package.json</code> add a *browser* field and add tell browserify 
     ...
 
 Since testdom only tries to require jsdom if no document exists; the browser will never reach that code and we are good. The tests will use the browser's DOM.
+
+## Changelog
+
+### 1.0.0
+
+* Removed non-jsdom dependencies (& globals)
+* Added ability to require non-jsdom modules only if DOM does not exists
+* Started list of working globals & polyfills
+
+### 0.1.0
+
+* Pre changelog era. Who knows what went on.
 
 enjoy.

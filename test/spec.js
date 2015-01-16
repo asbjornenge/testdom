@@ -1,5 +1,7 @@
 var assert  = require('assert')
-var testdom = require('../index')('<html><body><div id="div"></div></body></html>')
+var testdom = require('../index')('<html><body><div id="div"></div></body></html>', {
+    localStorage : 'localStorage'
+})
 
 describe('testdom', function() {
 
@@ -12,7 +14,7 @@ describe('testdom', function() {
         assert(div.length, 1)
     })
 
-    it('has localStorage', function() {
+    it('can load additional globals', function() {
         assert(localStorage != undefined)
         assert(localStorage.setItem != undefined)
         assert(localStorage.removeItem != undefined)
