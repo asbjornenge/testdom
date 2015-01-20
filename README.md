@@ -33,6 +33,8 @@ A list of modules confirmed to work well as a global/polyfill for jsdom.
 | Global        | Module        | Notes |
 |:------------- |:------------- |:----- | 
 | localStorage  | [localStorage](https://www.npmjs.com/package/localStorage) | 404 link but npm install works |
+| Promise  | [es6-promises](https://www.npmjs.com/package/es6-promises) | Different than `es6-promise` (singular). |
+
 
 ## Testling
 
