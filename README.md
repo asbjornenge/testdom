@@ -54,6 +54,10 @@ Since testdom only tries to require jsdom if no document exists; the browser wil
 
 ## Changelog
 
+### 1.0.1
+
+* Upgraded jsdom dependency from 2.x.x to 3.x.x
+
 ### 1.0.0
 
 * Removed non-jsdom dependencies (& globals)
