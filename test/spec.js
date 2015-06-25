@@ -1,6 +1,7 @@
 var assert  = require('assert')
 var testdom = require('../index')('<html><body><div id="div"></div></body></html>', {
-    localStorage : 'localStorage'
+    localStorage : 'localStorage',
+    indexedDB: { deleteDatabase: function() { this.deletedDb = 'im_deleted'; } }
 })
 
 describe('testdom', function() {
@@ -19,5 +20,12 @@ describe('testdom', function() {
         assert(localStorage.setItem != undefined)
         assert(localStorage.removeItem != undefined)
     })
+
+    it('can load arbitrarily defined globals', function() {
+        indexedDB.deleteDatabase();
+        assert(indexedDB != undefined);
+        assert(indexedDB.deleteDatabase != undefined); 
+        assert(indexedDB.deletedDb === 'im_deleted');
+    });
 
 })
