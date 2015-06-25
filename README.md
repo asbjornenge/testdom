@@ -20,11 +20,13 @@ It works by checking if a global document exists in it's current environment. If
 Testdom supports an argument of *additional globals* that will be loaded (using require) only if no DOM exists. This way users can experiment with different modules as browser global replacements and polyfills.
 
     require('testdom')('<html><body></body></html>', {
-        localStorage : 'localStorage'
+        localStorage : 'localStorage',
     })
     console.log(localStorage)
 
 In the *additional globals* object the **key** is the **name of the global** the the **value** is the **module** name to be require'd.
+
+Since v1.1.0 we also support **arbitrary globals**, so anything passed to *additional globals* that is not a string, we be added globally as is.
 
 ### Confirmed modules
 
@@ -53,6 +55,10 @@ In your <code>package.json</code> add a *browser* field and add tell browserify 
 Since testdom only tries to require jsdom if no document exists; the browser will never reach that code and we are good. The tests will use the browser's DOM.
 
 ## Changelog
+
+### 1.1.0
+
+* Support for arbitrary globals
 
 ### 1.0.1
 
