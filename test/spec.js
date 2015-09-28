@@ -24,7 +24,7 @@ describe('testdom', function() {
     it('can load arbitrarily defined globals', function() {
         indexedDB.deleteDatabase();
         assert(indexedDB != undefined);
-        assert(indexedDB.deleteDatabase != undefined); 
+        assert(indexedDB.deleteDatabase != undefined);
         assert(indexedDB.deletedDb === 'im_deleted');
     });
 
