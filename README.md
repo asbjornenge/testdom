@@ -56,6 +56,10 @@ Since testdom only tries to require jsdom if no document exists; the browser wil
 
 ## Changelog
 
+### 2.0.0
+
+* Upgraded `jsdom` to 6.5.1 -- requires node 4+
+
 ### 1.1.0
 
 * Support for arbitrary globals
