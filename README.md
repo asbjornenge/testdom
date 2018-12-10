@@ -56,6 +56,10 @@ Since testdom only tries to require jsdom if no document exists; the browser wil
 
 ## Changelog
 
+### 3.0.0
+
+* Upgraded `jsdom` to 13.0.0 -- requires node 8+
+
 ### 2.0.0
 
 * Upgraded `jsdom` to 6.5.1 -- requires node 4+
